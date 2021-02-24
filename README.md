@@ -2,6 +2,8 @@
 
 **Shellspeed** is an application that attempts to indicate the performance of a shell by measuring the speed that a set of specified or default commands take to execute.
 
+This application was developed to test the **Ion** shell performance that is part of the **Redox** project.  Some tests were done comparing **Ion** running in linux versus **bash** in linux (as well as **Nushell**), as well as **Ion** running in **Redox** compared to **Ion** running in linux.  During development I was made aware of a more mature tool for testing called **Hyperfine** which describes itself as a command line benchmarking tool.  This tool has way more features than **Shellspeed**, so I would recommend it for many testing scenarios, except perhaps where a shell does not have looping capability, but it is desired to run a repeated set of commands to get a good average performance measure.  **Shellspeed** has this capability. 
+
 Currently, the best way to run this application is to allow it to run its default set of commands.  You specify the shell you want to test, and the net time to run these commands will be returned:
 
 ./shellspeed -s ion -d
